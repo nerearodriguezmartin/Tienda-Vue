@@ -1,0 +1,28 @@
+.header{
+    /*posicionar header detro de container*/ 
+    grid-column: 1 / -1; /*1 / 11*/
+    grid-row: 1 / 2;
+    /* mi header también es un grid*/ 
+    display: grid;
+    grid-template-columns: minmax(10rem, 1fr) repeat(7, minmax(min-content, 16rem)) minmax(10rem, 1fr);
+    grid-template-rows: repeat(3, min-content);
+    grid-gap:2rem;
+    background-color: color(quinternary);
+    width: 100vw;
+    
+}
+
+.modal{
+    &-body>button{
+    display: block;
+    width: 60%;
+    font-size: size(sm);
+    background-color: color(quaternary);
+  }
+
+  &-title{
+    font-size: size(lg);
+    font-family: 'Dancing Script';
+    font-weight: bold;
+  }
+}

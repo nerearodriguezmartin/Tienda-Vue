@@ -1,0 +1,14 @@
+.registro{
+    grid-column: 2/10;
+
+    &-btn{
+        font-size: size(xs);
+        text-decoration: none;
+        color: color(quaternary);
+        display: block;
+        padding: 0.5rem;
+        border: 0.1rem solid color(quaternary);    
+        background-color: lighten(color(primary), 20%);
+        width: 30%;
+    }
+}

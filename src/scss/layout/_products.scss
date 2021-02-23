@@ -1,0 +1,164 @@
+.products{
+    /*posicionar en grid container*/
+    grid-column: 1 / -1;
+    grid-row: 3 / 4; 
+    width: 100vw;
+
+    &-heading{
+        margin: 5rem 0;
+        &-text{
+            font-size: size(lg)*1.5;
+            text-align: center;
+            font-weight: 300;
+            color: color(primary);
+            font-family: 'Dancing Script', cursive;
+        }
+
+    }
+
+    &-wraper{
+        @include flexposition();
+        flex-wrap: wrap;
+        margin: auto;
+    }
+
+    &-wraper .product{
+        width: 28rem;
+        height: 46rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        margin: 20px;
+        transition: all 0.25s;
+    }
+
+    &-wraper .product:hover{
+        transform: translateY(-15px);
+        box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.product{
+    
+    padding: 2rem;
+    background-color: color(secondary);
+
+    &:hover .product-description{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &-img{
+        width: 100%;
+        height: 16rem;
+    }
+    
+    &-description{
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: transparentize(color(secondary), .4);
+        padding: 2rem;
+        border: 0.1rem solid color(primary);
+        border-radius: 0.5rem;
+        color: color(primary);
+        opacity: 0;
+        transition: all 1s .5s;
+
+        @include response(lg) {
+            padding: 1rem;
+        }
+
+        @include response(sm) {
+            border: none;
+        }
+    
+
+        &-heading{
+            font-size: size(md);
+            font-family: 'Dancing Script', cursive;
+            color: color(quaternary);
+            font-weight: bold;
+            @include response(lg) {
+                font-size: size(sm)*1.2;
+            }
+
+            @include response(sm) {
+                font-size: size(md);
+            }
+        }
+
+        &-text{
+            font-size: size(xs)*0.6;
+
+            @include response(lg) {
+                font-size: size(xs)*0.6;
+            }
+
+            @include response(sm) {
+                font-size: size(xs)*0.6;
+            }
+        }
+
+        &-stock{
+            font-size: size(xs)*0.8;
+            color: color(primary);
+            font-weight: bold;
+
+            
+        }
+
+
+        &-price {
+            font-size: size(xs);
+            font-weight: 300;
+            margin: 1rem 0;
+
+            @include response(lg) {
+                font-size: size(xs)*0.9;
+            }
+
+
+
+            span {
+                font-weight: 600;
+            }
+            
+        }
+
+        &-btn{
+            font-size: size(xs);
+            text-decoration: none;
+            color: color(quaternary);
+            text-align: center;
+            display: block;
+            padding: 0.5rem;
+            border: 0.1rem solid color(quaternary);    
+            background-color: lighten(color(primary), 20%);
+        
+
+        
+        }
+        &-btn:hover{
+            text-decoration: none;
+            color: color(quaternary);
+            background-color: color(secondary)
+
+        }
+
+        
+    
+    }
+}
+
+
+    .products-btn {
+        @include flexposition();
+    }
+    
+    
+
+
+
+

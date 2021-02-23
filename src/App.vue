@@ -1,18 +1,32 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+
+    <div class="container">
+      <cabecera ></cabecera>
+      <router-view></router-view>
+      <pie></pie>
+      <notifications group="foo" />
+    </div>
+
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script lang="js">
+import cabecera from './components/cabecera'
+import pie from './components/pie'
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    cabecera,
+    pie
+  },
+  data () {
+      return {
+      }
+    },
+    methods: {
+      
+    }
 }
 </script>
 

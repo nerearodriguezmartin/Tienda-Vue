@@ -1,0 +1,21 @@
+
+.heading{
+    /*posicionar cabecera en grid header*/ 
+    grid-column: 2 / 10;
+    grid-row:  2 / 3;
+    text-align: center;
+    /*centrado, debajo logo y menú*/ 
+   
+    &-text{
+        font-family: 'Dancing Script', cursive;
+        /*función size para tamaño texto*/ 
+        font-size:size(xl) * 2; 
+        font-weight: lighter;
+        letter-spacing: 0.5rem;
+        @include response(sm){
+            font-size: size(xl)*1.5;
+    
+        }
+    }
+
+}

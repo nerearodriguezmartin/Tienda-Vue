@@ -1,0 +1,61 @@
+.carrito{
+    grid-column: 1/-1;
+    width: 100vw;
+
+    &-img{
+        width: 8rem;
+    }
+
+    &-cantidad{
+        width: 5rem;
+    }
+
+    &-table{
+        width: 95%;
+        margin-left: 15px;
+        
+        &-total{
+            
+            @include response(lg) {
+                font-size: size(lg);
+            }
+    
+            @include response(sm) {
+                font-size: size(lg);
+            }
+            @include response(md) {
+                font-size: size(lg);
+            }
+            @include response(xl) {
+                font-size: size(xl);
+            }
+            td{
+                font-family: 'Cuprum', sans-serif;
+            }
+
+            
+        }
+
+        tr:first-child {background-color: color(tertiary)}
+        tr:nth-child(2n+3) {background-color: color(secondary)}
+    }
+    button{
+        font-size: size(xs);
+        text-decoration: none;
+        color: color(quaternary);
+        text-align: center;
+        display: block;
+        padding: 0.5rem;
+        border: 0.1rem solid color(quaternary);    
+        background-color: lighten(color(primary), 20%);
+        margin-bottom: 3rem;
+    }
+
+    h2{
+        font-size: size(lg)*1.5;
+            text-align: center;
+            font-weight: 300;
+            color: color(primary);
+            font-family: 'Dancing Script', cursive;
+    }
+}

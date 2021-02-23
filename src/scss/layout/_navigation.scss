@@ -1,0 +1,47 @@
+.first-nav{
+    /*posicionar dentro grid header*/ 
+    /*final primera línea*/
+    grid-column: 5 / 11;
+    grid-row: 1 / 2;
+    
+   
+    @include navigation();
+    /*lo posicionamos según la vista*/
+    @include response(xl){
+        grid-column: 7 / 10;
+
+    }
+    @include response(lg){
+        grid-column: 7 / 10;
+
+    }
+
+    @include response(md){
+        grid-column: 6 / 10;
+
+    }
+
+    @include response(sm){
+        grid-column: 5 / 10;
+
+    }
+
+    &-link{
+        font-family: 'Cuprum', sans-serif;
+        
+        @include response(sm){
+            font-size: small;
+    
+        }
+        @include response(xl){
+            font-size: medium;
+    
+        }
+    }
+}
+
+
+
+
+
+

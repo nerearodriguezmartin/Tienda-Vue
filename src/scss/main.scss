@@ -1,0 +1,19 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+@import "base/base";
+
+@import "layout/header";
+@import "layout/navigation";
+@import "layout/slide";
+@import "layout/products";
+@import "layout/carrito";
+@import "layout/panel";
+@import "layout/registro";
+@import "layout/footer";
+
+
+@import "components/logo";
+@import "components/heading";
+
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Cuprum:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Open+Sans&display=swap');

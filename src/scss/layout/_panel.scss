@@ -1,0 +1,50 @@
+.panel{
+    grid-column: 1/-1;
+
+    &-img{
+        width: 8rem;
+    }
+
+    &-cantidad{
+        width: 5rem;
+    }
+
+    &-table{
+        width: 100%;
+
+        &-plus{
+            text-align: center;
+            @include response(lg) {
+                font-size: size(lg)*1.5;
+            }
+    
+            @include response(sm) {
+                font-size: size(xl);
+            }
+            @include response(md) {
+                font-size: size(xl)*1.5;
+            }
+            @include response(xl) {
+                font-size: size(xl);
+            }
+        }
+    }
+    &-btn{
+        font-size: size(xs);
+        text-decoration: none;
+        color: color(quaternary);
+        display: block;
+        padding: 0.5rem;
+        border: 0.1rem solid color(quaternary);    
+        background-color: lighten(color(primary), 20%);
+        width: 30%;
+    }
+
+    h2{
+        font-size: size(lg)*1.5;
+            text-align: center;
+            font-weight: 300;
+            color: color(primary);
+            font-family: 'Dancing Script', cursive;
+    }
+}
